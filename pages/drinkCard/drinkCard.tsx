@@ -1,4 +1,4 @@
-import { Card, Image, Text, Group, Badge, createStyles, UnstyledButton } from '@mantine/core';
+import { Card, Text, Group, createStyles, UnstyledButton } from '@mantine/core';
 import { useRouter } from 'next/router';
 
 const useStyles = createStyles((theme) => ({
@@ -35,8 +35,8 @@ interface DrinkCardProps {
   height: number
 }
 
-export function DrinkCard({ image, name, height, id }: DrinkCardProps) {
-  const { classes, theme } = useStyles();
+export default function DrinkCard({ image, name, height, id }: DrinkCardProps) {
+  const { classes } = useStyles();
    const router = useRouter()
   const onClick = ()=>{
     router.push({

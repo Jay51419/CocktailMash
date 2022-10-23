@@ -1,4 +1,4 @@
-export default interface IngredientModel {
+export  interface IngredientModel {
     idIngredient: string | null
     strIngredient: string | null
     strDescription: string | null

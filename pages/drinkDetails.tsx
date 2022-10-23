@@ -1,11 +1,10 @@
-import { useEffect, useState, useRef, LegacyRef } from "react"
+import { useEffect, useState } from "react"
 import type { NextPage } from "next"
 import { useRouter } from "next/router";
-import CocktailModel from "./cocktaildb/coctailModel";
-import CocktailDB from "./cocktaildb/cocktaildb";
-import { Box, Container, createStyles, Divider, Grid, Group, Loader, SimpleGrid, Text, useMantineTheme } from "@mantine/core";
-import { Footer } from "./footer/footer";
-import Image from "next/image";
+import {CocktailModel} from "./cocktaildb/coctailModel";
+import {CocktailDB} from "./cocktaildb/cocktaildb";
+import { Box, Container, Divider, Group, SimpleGrid, Text } from "@mantine/core";
+import  Footer  from "./footer/footer";
 
 const api = new CocktailDB()
 

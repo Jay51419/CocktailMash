@@ -2,9 +2,9 @@ import { Container, createStyles, Group,  useMantineTheme } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import type { NextPage } from 'next'
 import { useEffect, useState } from "react"
-import CocktailDB from './cocktaildb/cocktaildb'
-import { Footer } from './footer/footer'
-import { IngredientCard } from './ingredientCard/ingredientCard'
+import {CocktailDB} from './cocktaildb/cocktaildb'
+import  Footer  from './footer/footer'
+import  IngredientCard  from './ingredientCard/ingredientCard'
 
 const alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"] as const
 

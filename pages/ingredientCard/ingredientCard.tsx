@@ -1,6 +1,5 @@
 import { Card, Image, Text, Group, Badge, createStyles, UnstyledButton, Loader, useMantineTheme } from '@mantine/core';
 import { useRouter } from 'next/router';
-import {useRef} from "react"
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -35,7 +34,7 @@ interface IngredientCardProps {
   height?:number
 }
 
-export function IngredientCard({name,height }: IngredientCardProps) {
+export default function IngredientCard({name,height }: IngredientCardProps) {
   const { classes } = useStyles();
   const router = useRouter()
   const imgSRC = `https://www.thecocktaildb.com/images/ingredients/${name}.png`

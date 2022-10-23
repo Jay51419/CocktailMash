@@ -1,8 +1,8 @@
-import CocktailModel from "./coctailModel"
-import IngredientModel from "./ingredientModel"
-import SearchByIngredientModel from "./searchByIngredientModel"
+import {CocktailModel} from "./coctailModel"
+import {IngredientModel} from "./ingredientModel"
+import {SearchByIngredientModel} from "./searchByIngredientModel"
 
-export default class CocktailDB {
+export  class CocktailDB {
 
     
     private api = "https://www.thecocktaildb.com/api/json/v1/1/"

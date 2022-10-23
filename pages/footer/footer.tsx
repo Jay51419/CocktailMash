@@ -99,7 +99,7 @@ const useStyles = createStyles((theme) => ({
 interface FooterLinksProps {
 }
 
-export function Footer({ }: FooterLinksProps) {
+export default function Footer({ }: FooterLinksProps) {
     const { classes } = useStyles();
     return (
         <footer className={classes.footer}>

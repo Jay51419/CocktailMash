@@ -1,4 +1,4 @@
-export default interface CocktailModel {
+export interface CocktailModel {
     idDrink?: string | null
     strDrink?: string | null
     strDrinkAlternate?: string | null

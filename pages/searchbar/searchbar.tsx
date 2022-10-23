@@ -2,11 +2,11 @@ import { Autocomplete, Group, MediaQuery, Select, useMantineTheme } from '@manti
 import Router, { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { AiOutlineSearch } from "react-icons/ai"
-import CocktailDB from '../cocktaildb/cocktaildb';
+import {CocktailDB} from '../cocktaildb/cocktaildb';
 
 type SearchType = "Cocktail" | "Ingredient"
 
-export function Searchbar() {
+export default function Searchbar() {
     const theme = useMantineTheme()
     const router = useRouter()
     const popularDrinks = ["Mojito", "Old Fashioned", "Long Island Tea", "Negroni", "Whiskey Sour", "Dry Martini", "Daiquiri", "Margarita",]

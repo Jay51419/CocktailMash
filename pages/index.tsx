@@ -3,11 +3,11 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { CSSProperties, useEffect, useState } from 'react'
-import CocktailDB from './cocktaildb/cocktaildb'
-import SearchByIngredientModel from './cocktaildb/searchByIngredientModel'
-import { DrinkCard } from './drinkCard/drinkCard'
-import { Footer } from './footer/footer'
-import { Searchbar } from './searchbar/searchbar'
+import {CocktailDB} from './cocktaildb/cocktaildb'
+import {SearchByIngredientModel} from './cocktaildb/searchByIngredientModel'
+import  DrinkCard  from './drinkCard/drinkCard'
+import  Footer  from './footer/footer'
+import  Searchbar  from './searchbar/searchbar'
 
 
 const api = new CocktailDB()
