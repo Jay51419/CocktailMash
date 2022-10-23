@@ -2,7 +2,7 @@ import { Autocomplete, Group, MediaQuery, Select, useMantineTheme } from '@manti
 import Router, { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { AiOutlineSearch } from "react-icons/ai"
-import {CocktailDB} from '../cocktaildb/cocktaildb';
+import {CocktailDB} from '../../cocktaildb/cocktaildb';
 
 type SearchType = "Cocktail" | "Ingredient"
 

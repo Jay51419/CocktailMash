@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { createStyles, Header, Group, Burger, Container, Box, Text, Button, HoverCard, Center, useMantineTheme, SimpleGrid, UnstyledButton, Anchor, ScrollArea, Drawer, Collapse } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
-import {CocktailDB} from '../cocktaildb/cocktaildb';
+import {CocktailDB} from '../../cocktaildb/cocktaildb';
 import { useRouter } from 'next/router';
 
 const useStyles = createStyles((theme) => ({

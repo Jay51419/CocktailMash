@@ -3,8 +3,8 @@ import { useMediaQuery } from '@mantine/hooks'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from "react"
-import {CocktailDB} from './cocktaildb/cocktaildb'
-import {CocktailModel} from './cocktaildb/coctailModel'
+import {CocktailDB} from '../cocktaildb/cocktaildb'
+import {CocktailModel} from '../cocktaildb/coctailModel'
 import  DrinkCard  from './drinkCard/drinkCard'
 import  Footer  from './footer/footer'
 
