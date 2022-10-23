@@ -56,7 +56,7 @@ export default function DrinkCard({ image, name, height, id }: DrinkCardProps) {
         <Card.Section className={classes.section} mt="md">
           <Group position="apart">
             <Text size="lg" weight={500}>
-              {name.substring(0, 20)}
+              {name?.substring(0, 20)}
             </Text>
           </Group>
         </Card.Section>

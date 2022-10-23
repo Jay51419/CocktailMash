@@ -55,7 +55,7 @@ export default function IngredientCard({name,height }: IngredientCardProps) {
       <Card.Section className={classes.section} mt="md">
         <Group position="apart">
           <Text size="lg" weight={500}>
-            {name.length>20?`${name.substring(0,20)}...`:name}
+            {name?.length>20?`${name.substring(0,20)}...`:name}
           </Text>
         </Group>
       </Card.Section>
