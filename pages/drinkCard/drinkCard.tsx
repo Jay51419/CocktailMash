@@ -50,7 +50,7 @@ export function DrinkCard({ image, name, height, id }: DrinkCardProps) {
     <UnstyledButton onClick={onClick} >
       <Card withBorder radius="md" p="md" className={classes.card}>
         <Card.Section>
-          <Image className={classes.img} src={image} alt={name} height={height} />
+          <img className={classes.img} src={image} alt={name} style={{height}} />
         </Card.Section>
 
         <Card.Section className={classes.section} mt="md">

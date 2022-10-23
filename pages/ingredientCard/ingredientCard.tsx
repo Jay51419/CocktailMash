@@ -49,7 +49,7 @@ export function IngredientCard({name,height }: IngredientCardProps) {
     <Card withBorder radius="md" p="md" className={classes.card}>
       <Card.Section>
      
-        <Image  className={classes.img} src={imgSRC} alt={name} height={height&&height||300} />
+        <img  className={classes.img} src={imgSRC} alt={name} style={{height:height&&height||300}} />
       
       </Card.Section>
 

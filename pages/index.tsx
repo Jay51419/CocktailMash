@@ -131,7 +131,7 @@ const Home: NextPage = () => {
               }
               return (
                 <Box key={index} style={ingredientImageWrapperStyle} >
-                  <Image height={350} src={src} alt={name} />
+                  <img src={src} alt={name} />
                   <h3 >{name}</h3>
 
                 </Box>
@@ -201,7 +201,7 @@ const Home: NextPage = () => {
                   }
               })}>
                 <Box my={20} key={index} style={ingredientImageWrapperStyle} >
-                  <Image height={300} src={src} alt={name} />
+                  <img style={{height:300}} src={src} alt={name} />
                   <Text  size={"lg"} >{name}</Text>
                 </Box>
                 </UnstyledButton>

@@ -130,7 +130,7 @@ const DrinkDetails: NextPage = () => {
                 <SimpleGrid cols={2} breakpoints={[{ maxWidth: 650, cols: 1 }]} >
                     <Box>
                         <Text my={10} size={"xl"} >{cocktail.strDrink}</Text>
-                        <Image height={400} src={cocktail.strDrinkThumb as string} alt="" />
+                        <img style={{height:400}} src={cocktail.strDrinkThumb as string} alt="" />
                         <Divider my={10} />
                     </Box>
                     <Box>
@@ -160,7 +160,7 @@ const DrinkDetails: NextPage = () => {
 const ShowIngredient = ({ name, index, measures }: { name: string, index: number, measures: string[] }) => {
 
     return (<Box key={index} >
-        <Image src={`https://www.thecocktaildb.com/images/ingredients/${name}.png`} height={180} alt="" />
+        <img src={`https://www.thecocktaildb.com/images/ingredients/${name}.png`} style={{height:180}} alt="" />
         <Text align="center" my={10}>{name} - {measures[index]}</Text>
     </Box>)
 }
