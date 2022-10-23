@@ -24,15 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           fontFamily: "Irish Grover"
         }}
       >
-        <Navbar links={
-          [
-            { link: "/drinks", label: "Drinks" },
-            { link: "/ingredients", label: "Ingredients" },
-            { link: "/glasses", label: "Glasses" },
-            { link: "/categories", label: "Categories" },
-          
-          
-          ]} />
+        <Navbar />
         <Component {...pageProps} />
       </MantineProvider>
     </>

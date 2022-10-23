@@ -1,10 +1,8 @@
-import { Center, Container, createStyles, Group, MediaQuery, Pagination, Text, ThemeIcon, useMantineTheme } from '@mantine/core'
+import { Container, createStyles, Group,  useMantineTheme } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import type { NextPage } from 'next'
 import { useEffect, useState } from "react"
 import CocktailDB from './cocktaildb/cocktaildb'
-import CocktailModel from './cocktaildb/coctailModel'
-import { DrinkCard } from './drinkCard/drinkCard'
 import { Footer } from './footer/footer'
 import { IngredientCard } from './ingredientCard/ingredientCard'
 
@@ -53,7 +51,6 @@ const Ingredients: NextPage = () => {
 
     useEffect(() => {
         getIngredients().then(ingredients => setIngredients(ingredients))
-        console.log(largerThanSM)
     }, [])
     return <div style={{ marginTop: 100 }} >
         <Container>

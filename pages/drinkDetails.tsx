@@ -5,6 +5,7 @@ import CocktailModel from "./cocktaildb/coctailModel";
 import CocktailDB from "./cocktaildb/cocktaildb";
 import { Box, Container, createStyles, Divider, Grid, Group, Loader, SimpleGrid, Text, useMantineTheme } from "@mantine/core";
 import { Footer } from "./footer/footer";
+import Image from "next/image";
 
 const api = new CocktailDB()
 
@@ -62,14 +63,6 @@ const cocktailMock: CocktailModel = {
     "dateModified": new Date("2015-08-18 14:42:59")
 }
 
-const useStyles = createStyles((theme) => ({
-    cocktailImg: {
-        height: 400
-    },
-    ingredientImg: {
-        height: 180
-    }
-}))
 
 function getCocktailByID(id: string): Promise<CocktailModel[]> {
     const cocktail = api.cocktailByID(id).then(cocktail => cocktail.drinks)
@@ -82,7 +75,6 @@ function getCocktailByName(name: string): Promise<CocktailModel[]> {
 
 const DrinkDetails: NextPage = () => {
     const router = useRouter()
-    const { classes } = useStyles()
     const [error, setError] = useState(false)
     const [cocktail, setCocktail] = useState<CocktailModel>(cocktailMock)
     const measures = [
@@ -138,7 +130,7 @@ const DrinkDetails: NextPage = () => {
                 <SimpleGrid cols={2} breakpoints={[{ maxWidth: 650, cols: 1 }]} >
                     <Box>
                         <Text my={10} size={"xl"} >{cocktail.strDrink}</Text>
-                        <img className={classes.cocktailImg} src={cocktail.strDrinkThumb as string} alt="" />
+                        <Image height={400} src={cocktail.strDrinkThumb as string} alt="" />
                         <Divider my={10} />
                     </Box>
                     <Box>
@@ -166,10 +158,9 @@ const DrinkDetails: NextPage = () => {
 
 
 const ShowIngredient = ({ name, index, measures }: { name: string, index: number, measures: string[] }) => {
-    const { classes } = useStyles()
 
     return (<Box key={index} >
-        <img src={`https://www.thecocktaildb.com/images/ingredients/${name}.png`} className={classes.ingredientImg} alt="" />
+        <Image src={`https://www.thecocktaildb.com/images/ingredients/${name}.png`} height={180} alt="" />
         <Text align="center" my={10}>{name} - {measures[index]}</Text>
     </Box>)
 }

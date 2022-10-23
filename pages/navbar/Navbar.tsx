@@ -210,7 +210,7 @@ export function Navbar() {
       <Header height={56} mb={0} className={classes.header} >
         <Container>
           <Box className={classes.inner}>
-            <Image priority src="/logo.png" height={36} width={162} />
+            <Image priority src="/logo.png" alt='CocktailMash' height={36} width={162} />
             <Group spacing={5} className={classes.links}>
 
               <Link

@@ -105,7 +105,7 @@ export function Footer({ }: FooterLinksProps) {
         <footer className={classes.footer}>
             <Container className={classes.inner}>
                 <div className={classes.logo}>
-                    <Image src="/logo.png" height={36} width={162} />
+                    <Image src="/logo.png" alt='CocktailMash' height={36} width={162} />
                     <Text size="xs" color="dimmed" className={classes.description}>
                         Let nobody thirst for good drink.
                     </Text>

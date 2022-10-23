@@ -87,7 +87,7 @@ const Home: NextPage = () => {
   return (
     <Box>
       <Box className={classes.hero} >
-        <Image src="/hero-2.jpg" layout='fill' objectFit={"cover"} />
+        <Image src="/hero-2.jpg" alt='background' layout='fill' objectFit={"cover"} />
       <Box className={classes.overlay} />
       </Box>
 
@@ -131,7 +131,7 @@ const Home: NextPage = () => {
               }
               return (
                 <Box key={index} style={ingredientImageWrapperStyle} >
-                  <img src={src} alt={name} />
+                  <Image height={350} src={src} alt={name} />
                   <h3 >{name}</h3>
 
                 </Box>
@@ -201,7 +201,7 @@ const Home: NextPage = () => {
                   }
               })}>
                 <Box my={20} key={index} style={ingredientImageWrapperStyle} >
-                  <img style={{height:300}} src={src} alt={name} />
+                  <Image height={300} src={src} alt={name} />
                   <Text  size={"lg"} >{name}</Text>
                 </Box>
                 </UnstyledButton>
