@@ -6,8 +6,8 @@ import { CSSProperties, useEffect, useState } from 'react'
 import {CocktailDB} from '../cocktaildb/cocktaildb'
 import {SearchByIngredientModel} from '../cocktaildb/searchByIngredientModel'
 import  DrinkCard  from '../components/drinkCard/drinkCard'
-import  Footer  from './footer/footer'
-import  Searchbar  from './searchbar/searchbar'
+import Footer from '../components/footer/footer'
+import Searchbar from '../components/searchbar/searchbar'
 
 
 const api = new CocktailDB()

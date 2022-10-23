@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import {CocktailModel} from "../cocktaildb/coctailModel";
 import {CocktailDB} from "../cocktaildb/cocktaildb";
 import { Box, Container, Divider, Group, SimpleGrid, Text } from "@mantine/core";
-import  Footer  from "./footer/footer";
+import Footer from "../components/footer/footer";
 
 const api = new CocktailDB()
 

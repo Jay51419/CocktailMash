@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { MantineProvider } from '@mantine/core';
 import Head from 'next/head';
-import Navbar  from './navbar/Navbar';
+import Navbar  from '../components/navbar/Navbar';
 
 
 function MyApp({ Component, pageProps }: AppProps) {

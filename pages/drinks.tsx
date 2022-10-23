@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 import {CocktailDB} from '../cocktaildb/cocktaildb'
 import {CocktailModel} from '../cocktaildb/coctailModel'
 import  DrinkCard  from '../components/drinkCard/drinkCard'
-import  Footer  from './footer/footer'
+import Footer from '../components/footer/footer'
 
 const alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"] as const
 
