@@ -1,26 +1,24 @@
 import { Autocomplete, Group, MediaQuery, Select, useMantineTheme } from '@mantine/core';
-import Router, { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import {useCallback, useEffect, useState} from 'react';
 import { AiOutlineSearch } from "react-icons/ai"
 import {CocktailDB} from '../../cocktaildb/cocktaildb';
 
 type SearchType = "Cocktail" | "Ingredient"
+const popularDrinks = ["Mojito", "Old Fashioned", "Long Island Tea", "Negroni", "Whiskey Sour", "Dry Martini", "Daiquiri", "Margarita",]
+const popularIngredients = ["Vodka", "Gin", "Rum", "Tequila"]
+const api = new CocktailDB()
 
 export default function Searchbar() {
     const theme = useMantineTheme()
     const router = useRouter()
-    const popularDrinks = ["Mojito", "Old Fashioned", "Long Island Tea", "Negroni", "Whiskey Sour", "Dry Martini", "Daiquiri", "Margarita",]
-    const popularIngredients = ["Vodka", "Gin", "Rum", "Tequila"]
     const [suggestion, setSuggestion] = useState<(string[])>(popularDrinks)
     const [suggestionValue, setSuggestionValue] = useState<(string)>("")
     const [searchType, setSearchType] = useState<SearchType>("Cocktail")
 
 
-    const api = new CocktailDB()
-    useEffect(() => {
-        onChange(suggestionValue)
-    }, [searchType])
-    const onChange = (value: string) => {
+
+    const onChange = useCallback((value: string) => {
         setSuggestionValue(value)
         if (searchType == "Cocktail") {
             if (value == "") {
@@ -28,7 +26,7 @@ export default function Searchbar() {
             } else {
                 api.searchCocktailByName(value).then(cocktail => {
                     if (cocktail.drinks !== null) {
-                        const newSuggestion: string[] = cocktail.drinks.map((e, i) => {
+                        const newSuggestion: string[] = cocktail.drinks.map((e) => {
                             return e["strDrink"] == null ? "" : e["strDrink"].toString()
                         })
                         setSuggestion(newSuggestion)
@@ -41,7 +39,7 @@ export default function Searchbar() {
             } else {
                 api.searchIngredientByName(value).then(cocktail => {
                     if (cocktail.ingredients !== null) {
-                        const newSuggestion: string[] = cocktail.ingredients.map((e, i) => {
+                        const newSuggestion: string[] = cocktail.ingredients.map((e) => {
                             return e["strIngredient"] == null ? "" : e["strIngredient"].toString()
                         })
                         setSuggestion(newSuggestion)
@@ -49,8 +47,11 @@ export default function Searchbar() {
                 })
             }
         }
-    }
-
+    },[searchType])
+    useEffect(() => {
+            onChange(suggestionValue)
+        },
+        [onChange,suggestionValue])
     return (
         <Group spacing={0}  >
             <MediaQuery largerThan={theme.breakpoints.sm} styles={{width:"70%"}} >
