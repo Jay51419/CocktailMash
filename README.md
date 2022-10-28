@@ -28,6 +28,8 @@
 ### Built With
 * [![Next][Next.js]][Next-url]
 * [![Mantine][Mantine]][Mantine-url]
+* [![TheCocktailDB][TheCocktailDB]][TheCocktailDB-url]
+
 
 
 <!-- CONTACT -->
@@ -50,3 +52,6 @@ Project Link: [https://github.com/Jay51419/CocktailMash](https://github.com/Jay5
 [Next-url]: https://nextjs.org/
 [Mantine]: https://img.shields.io/badge/Mantine-3d3d3d?style=for-the-badge&logo=mantine&logoColor=61DAFB
 [Mantine-url]: https://mantine.dev/
+[TheCocktailDB]: https://img.shields.io/badge/TheCocktailDB-FF7F50?style=for-the-badge&logo=thecocktaildb
+[TheCocktailDB-url]: https://www.thecocktaildb.com/
+
