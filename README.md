@@ -21,7 +21,7 @@
 
 [//]: # (## About The Project)
 
-![Website video](https://raw.githubusercontent.com/Jay51419/CocktailMash/master/video/site.mp4)
+![Website video](https://raw.githubusercontent.com/Jay51419/CocktailMash/master/video/site.gif)
 
 
 
