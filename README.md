@@ -21,7 +21,7 @@
 
 [//]: # (## About The Project)
 
-[![Website video][product-video]](#)
+![Website video](https://raw.githubusercontent.com/Jay51419/CocktailMash/master/video/site.mp4)
 
 
 
@@ -46,7 +46,6 @@ Project Link: [https://github.com/Jay51419/CocktailMash](https://github.com/Jay5
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-video]: video/site.mp4
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [Mantine]: https://img.shields.io/badge/Mantine-3d3d3d?style=for-the-badge&logo=mantine&logoColor=61DAFB
