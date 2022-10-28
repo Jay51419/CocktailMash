@@ -116,7 +116,7 @@ export default function Footer({ }: FooterLinksProps) {
             </Container>
             <Container className={classes.afterFooter}>
                 <Text color="dimmed" size="sm">
-                    © 2020 cocktailmash.co. All rights reserved.
+                    © 2022 cocktail-mash.co. All rights reserved.
                 </Text>
 
                 <Group spacing={0} className={classes.social} position="right" noWrap>
