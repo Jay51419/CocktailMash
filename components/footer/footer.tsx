@@ -1,6 +1,8 @@
 import { createStyles, Text, Container, ActionIcon, Group } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import { IconBrandGithub} from '@tabler/icons';
 import Image from 'next/image';
+import {useRouter} from "next/router";
+
 
 const useStyles = createStyles((theme) => ({
     footer: {
@@ -101,6 +103,7 @@ interface FooterLinksProps {
 
 export default function Footer({ }: FooterLinksProps) {
     const { classes } = useStyles();
+    const router = useRouter()
     return (
         <footer className={classes.footer}>
             <Container className={classes.inner}>
@@ -117,14 +120,10 @@ export default function Footer({ }: FooterLinksProps) {
                 </Text>
 
                 <Group spacing={0} className={classes.social} position="right" noWrap>
-                    <ActionIcon size="lg">
-                        <IconBrandTwitter size={18} stroke={1.5} />
-                    </ActionIcon>
-                    <ActionIcon size="lg">
-                        <IconBrandYoutube size={18} stroke={1.5} />
-                    </ActionIcon>
-                    <ActionIcon size="lg">
-                        <IconBrandInstagram size={18} stroke={1.5} />
+                    <ActionIcon onClick={()=>
+                        router.push("https://github.com/Jay51419/CocktailMash")
+                    } size="lg">
+                        <IconBrandGithub size={18} stroke={1.5} />
                     </ActionIcon>
                 </Group>
             </Container>
