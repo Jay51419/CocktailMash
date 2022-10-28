@@ -12,7 +12,7 @@
     <br />
     <br />
   </h4>
-    <a href="#">View Demo</a>
+    <a href="https://cocktail-mash.vercel.app/">View Website</a>
 
 </div>
 
