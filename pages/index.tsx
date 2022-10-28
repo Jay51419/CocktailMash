@@ -1,11 +1,21 @@
-import { Box, Center, Container, createStyles, MediaQuery, Text, UnstyledButton, useMantineTheme, } from '@mantine/core'
-import type { NextPage } from 'next'
+import {
+  Box,
+  Button,
+  Center,
+  Container,
+  createStyles,
+  MediaQuery,
+  Text,
+  UnstyledButton,
+  useMantineTheme,
+} from '@mantine/core'
+import type {NextPage} from 'next'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
-import { CSSProperties, useEffect, useState } from 'react'
+import {useRouter} from 'next/router'
+import {CSSProperties, useEffect, useState} from 'react'
 import {CocktailDB} from '../cocktaildb/cocktaildb'
 import {SearchByIngredientModel} from '../cocktaildb/searchByIngredientModel'
-import  DrinkCard  from '../components/drinkCard/drinkCard'
+import DrinkCard from '../components/drinkCard/drinkCard'
 import Footer from '../components/footer/footer'
 import Searchbar from '../components/searchbar/searchbar'
 
@@ -14,7 +24,7 @@ const api = new CocktailDB()
 const popularIngredients = ["Vodka", "Gin", "Rum", "Tequila"];
 const randomIngredients = ["Dark rum", "Scotch", "Bitters"];
 const ingredientImageSize = 350;
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   hero: {
     position: "absolute",
     top: 0,
@@ -73,10 +83,9 @@ const Home: NextPage = () => {
   const { classes } = useStyles();
 
   function drinksBasedOnActiveIngredient(ingredient: string): Promise<SearchByIngredientModel[]> {
-    const cocktails = api.searchByIngredient(ingredient).then(cocktail => {
+    return api.searchByIngredient(ingredient).then(cocktail => {
       return cocktail.drinks.slice(0, 3)
     })
-    return cocktails
   }
   useEffect(() => {
     drinksBasedOnActiveIngredient(popularIngredients[activeIngredient])
@@ -140,7 +149,7 @@ const Home: NextPage = () => {
           }
         </Box>
         <Box className={classes.popularIngredientsButtonWrapper}>
-          <button style={
+          <Button color={"gray"} style={
             {
               opacity: activeIngredient == 0 ? 0 : 1,
             }
@@ -149,8 +158,8 @@ const Home: NextPage = () => {
               const first = 0
               setAcitveIngredient(i => Math.max(first, i - 1))
             }
-          }>Previous</button>
-          <button style={
+          }> {"<"}</Button>
+          <Button color={"orange"} style={
             {
               opacity: activeIngredient == popularIngredients.length - 1 ? 0 : 1,
             }
@@ -159,7 +168,7 @@ const Home: NextPage = () => {
               const last = popularIngredients.length - 1
               setAcitveIngredient(i => Math.min(i + 1, last))
             }
-          }>Next</button>
+          }>{">"}</Button>
         </Box>
         <Center my={10}>
           <Box>

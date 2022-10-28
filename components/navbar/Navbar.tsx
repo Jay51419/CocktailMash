@@ -1,11 +1,28 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect } from "react"
-import { createStyles, Header, Group, Burger, Container, Box, Text, Button, HoverCard, Center, useMantineTheme, SimpleGrid, UnstyledButton, Anchor, ScrollArea, Drawer, Collapse } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { IconChevronDown } from '@tabler/icons';
+import {useEffect, useState} from "react"
+import {
+  Anchor,
+  Box,
+  Burger,
+  Center,
+  Collapse,
+  Container,
+  createStyles,
+  Drawer,
+  Group,
+  Header,
+  HoverCard,
+  ScrollArea,
+  SimpleGrid,
+  Text,
+  UnstyledButton,
+  useMantineTheme
+} from '@mantine/core';
+import {useDisclosure} from '@mantine/hooks';
+import {IconChevronDown} from '@tabler/icons';
 import {CocktailDB} from '../../cocktaildb/cocktaildb';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 
 const useStyles = createStyles((theme) => ({
   header:
@@ -46,6 +63,7 @@ const useStyles = createStyles((theme) => ({
     color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
     fontSize: theme.fontSizes.lg,
     fontWeight: 500,
+    transition:"all 0.3s",
 
     '&:hover': {
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.orange[6] : theme.colors.gray[0],
@@ -96,18 +114,16 @@ const api = new CocktailDB()
 function getGlasses(): Promise<{
   strGlass: string | null;
 }[]> {
-  const glasses = api.listOfGlasses().then(val => {
+  return api.listOfGlasses().then(val => {
     return val.drinks
   })
-  return glasses
 }
 function getCategories(): Promise<{
   strCategory: string | null;
 }[]> {
-  const categories = api.listOfCategories().then(val => {
+  return api.listOfCategories().then(val => {
     return val.drinks
   })
-  return categories
 }
 
 

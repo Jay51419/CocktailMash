@@ -4,6 +4,10 @@ import { useRouter } from 'next/router';
 const useStyles = createStyles((theme) => ({
   card: {
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+    transition:"transform 0.3s",
+    ":hover":{
+      transform:"scale(0.9)",
+    }
   },
 
   section: {
